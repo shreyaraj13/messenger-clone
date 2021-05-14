@@ -3,7 +3,7 @@ import "./App.css";
 import MessageCard from "./components/MessageCard";
 import db from "./firebase";
 import firebase from "firebase";
-// import FlipMove from "react-flip-move";
+import FlipMove from "react-flip-move";
 function App() {
   const [input, setInput] = useState("");
   const [messages, setMessages] = useState([]);
@@ -49,11 +49,11 @@ function App() {
     <div className="App">
       <h1>Messenger💌</h1>
       <p>Welcome {username}</p>
-      <div className="msg">
+      <FlipMove className="msg">
         {messages.map(({ id, message }) => (
           <MessageCard key={id} username={username} onMsg={message} />
         ))}
-      </div>
+      </FlipMove>
       <form className="input">
         <input
           placeholder="Enter a message"
