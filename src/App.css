@@ -1,49 +1,41 @@
 .App {
+  height: 100%;
+  margin: 0 auto;
+  background: #fff;
   text-align: center;
-  margin: 0px 300px 0px 300px;
-  background: rgb(31, 31, 31);
 }
 
 .App h1,
 .App p {
   margin: 0;
   padding: 8px;
+  color: #000d48;
 }
 
 .App .msg {
-  overflow-y: auto;
-  height: 550px;
   display: flex;
   flex-direction: column-reverse;
+  height: 550px;
+  padding: 0 .5rem;
+  overflow-y: auto;
   background: rgb(243, 234, 253);
   color: black;
   font-size: 20px;
-  padding-left: 10px;
-  padding-right: 10px;
 }
 
 .input {
-  margin: 2rem auto 0rem auto;
-  max-width: 40rem;
-}
-
-.input button {
-  margin-bottom: 0.5rem;
-  padding: 9px 10px 5px 10px;
-  border-radius: 20px;
-  border: 3px solid #8ca0ff;
-  background: #8ca0ff;
-  box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.6);
+  display: flex;
+  padding: 1rem .5rem;
 }
 
 .input input {
-  font: inherit;
-  width: 75%;
+  flex-basis: 70%;
+  padding: 1rem;
   border: 1px solid #ccc;
-  margin-bottom: 0;
-  border-radius: 20px;
-  height: 30px;
-  box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.6);
+  border-radius: 1.5rem;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  color: #262626;
+  font-size: 18px;
 }
 
 .input input:focus {
@@ -51,31 +43,31 @@
   border: 2px solid #8ca0ff;
 }
 
-@media (max-width: 1090px) {
-  .App {
-    margin: 0px 150px 0px 150px;
-  }
+.input button {
+  margin-left: 1rem;
+  padding: .75rem 1rem;
+  border: 3px solid #8ca0ff;
+  border-radius: 1.5rem;
+  background: #8ca0ff;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  color: #f2f4ff;
+  font-size: 18px;
 }
 
-@media (max-width: 800px) {
+
+@media (min-width: 768px) {
+  
   .App {
-    margin: 0px 50px 0px 50px;
+    max-width: 70%;
+    border-radius: 1rem;   
   }
+  
 }
 
-@media (max-width: 450px) {
+@media (min-width: 1024px) {
+  
   .App {
-    margin: 0px;
+    max-width: 36%;
   }
-}
-
-@media (max-height: 650px) {
-  .App .msg {
-    height: 450px;
-  }
-}
-@media (max-height: 570px) {
-  .App .msg {
-    height: 380px;
-  }
+  
 }
